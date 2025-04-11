@@ -91,3 +91,9 @@ git remote add origin https://github.com/username/repo-name.git
 
 # Step 5: Push your local code to GitHub
 git push -u origin main
+
+# Step 6: Undo Stage
+git reset HEAD file.txt
+
+# Save Changes for later
+git stash
