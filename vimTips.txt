@@ -1,0 +1,8 @@
+Quick Vim Tips (if you're inside Vim and unsure what to do):
+Press i → to start inserting/editing text
+
+Press Esc → to go back to command mode
+
+Type :wq → to save and quit
+
+Type :q! → to quit without saving (useful if you want to cancel changes)
