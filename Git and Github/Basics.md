@@ -109,3 +109,17 @@ file or directory structure in Git
    You can also see the diff of staged changes by using git diff --staged or git diff --cached
 
 6. Before a commit, you need to "stage" those changes using git add. This command moves the changes from your working directory to the staging area (also known as the index). 
+
+7. Temporarily switch to a different commit
+   If you want to temporarily go back to it, fool around, then come back to where you are, all you have to do is check out the desired commit:
+
+# This will detach your HEAD, that is, leave you with no branch checked out:
+  git checkout 0d1d7fc32
+
+8. Or if you want to make commits while you're there, go ahead and make a new branch while you're at it:
+   git checkout -b old-state 0d1d7fc32
+
+9. Reverting Working Copy to Most Recent Commit
+    To revert to the previous commit, ignoring any changes:
+
+    git reset --hard HEAD
