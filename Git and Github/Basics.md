@@ -91,3 +91,21 @@ git remote add origin https://github.com/username/repo-name.git
 
 # Step 5: Push your local code to GitHub
 git push -u origin main
+
+# Key points
+1. The mechanism that Git uses for this checksumming is called a SHA-1 hash.This is a 40-character
+string composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a
+file or directory structure in Git
+
+2. You can view all of your settings and where they are coming from using:
+   $ git config --list --show-origin
+
+3. $ git config --global user.name "John Doe"
+   $ git config --global user.email johndoe@example.com
+
+4. git add -h
+
+5. you can use git diff before adding files to see the changes in your working directory that aren't yet staged. 
+   You can also see the diff of staged changes by using git diff --staged or git diff --cached
+
+6. Before a commit, you need to "stage" those changes using git add. This command moves the changes from your working directory to the staging area (also known as the index). 
