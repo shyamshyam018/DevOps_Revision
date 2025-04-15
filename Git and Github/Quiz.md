@@ -107,3 +107,98 @@ git merge: Applies fetched changes manually if you used git fetch earlier.
 Answer: Use git pull for convenience when you trust upstream changes.
 Use git fetch + git merge when you want to inspect or review changes before merging.
 
+16. How do you list all branches available in your local repo?
+Command:
+git branch
+Usage: Shows all local branches and highlights the current active branch.
+
+17. How do you list all remote branches?
+Command:
+
+
+git branch -r
+Usage: Displays all remote-tracked branches (from origin, upstream, etc.).
+
+18. How do you delete a local branch?
+Command:
+git branch -d branch-name
+Usage: Safely deletes a local branch after it's been merged.
+To force delete (if not merged):
+
+
+git branch -D branch-name
+19. How do you delete a remote branch (e.g., on origin)?
+Command:
+git push origin --delete branch-name
+Usage: Deletes the branch from the remote repository (e.g., GitHub).
+
+20. How do you stash changes in Git?
+Command:
+git stash
+Usage: Temporarily shelves your uncommitted changes so you can work on something else.
+
+To bring back your changes:
+
+
+git stash apply
+21. How do you see a list of all stashes?
+Command:
+
+git stash list
+Usage: Lists all the stashes you've made.
+
+22. How do you apply a specific stash?
+Command:
+
+git stash apply stash@{2}
+Usage: Applies the third stash in your stash list.
+
+23. How do you rename a branch?
+Command:
+
+git branch -m old-name new-name
+Usage: Renames a local branch.
+
+24. How do you undo the last commit but keep your changes?
+Command:
+
+git reset --soft HEAD~1
+Usage: Undoes the last commit but retains your changes staged.
+
+25. How do you undo the last commit and also unstage the changes?
+Command:
+
+git reset --mixed HEAD~1
+26. How do you undo the last commit and discard changes completely?
+Command:
+git reset --hard HEAD~1
+⚠️ Warning: This will delete all changes from the last commit.
+
+27. How do you see a summary of all commits made in the repo?
+Command:
+git log --oneline
+Usage: Compact and easy-to-read list of commits.
+
+28. How do you view what changed in your working directory?
+Command:
+git status
+Usage: Shows modified/untracked/staged files.
+
+29. How do you compare changes between commits or branches?
+Command:
+git diff branch1 branch2
+Or:
+git diff HEAD
+
+30. How do you fix a merge conflict?
+Answer:
+
+Open the conflicted file — you'll see conflict markers (<<<<, ====, >>>>).
+Manually edit and resolve the conflict.
+
+Stage the resolved file:
+git add filename
+
+Finalize the merge:
+git commit
+
