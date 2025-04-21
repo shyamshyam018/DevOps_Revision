@@ -92,8 +92,42 @@ git remote add origin https://github.com/username/repo-name.git
 # Step 5: Push your local code to GitHub
 git push -u origin main
 
+<<<<<<< HEAD
 # Step 6: Undo Stage
 git reset HEAD file.txt
 
 # Save Changes for later
 git stash
+=======
+# Key points
+1. The mechanism that Git uses for this checksumming is called a SHA-1 hash.This is a 40-character
+string composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a
+file or directory structure in Git
+
+2. You can view all of your settings and where they are coming from using:
+   $ git config --list --show-origin
+
+3. $ git config --global user.name "John Doe"
+   $ git config --global user.email johndoe@example.com
+
+4. git add -h
+
+5. you can use git diff before adding files to see the changes in your working directory that aren't yet staged. 
+   You can also see the diff of staged changes by using git diff --staged or git diff --cached
+
+6. Before a commit, you need to "stage" those changes using git add. This command moves the changes from your working directory to the staging area (also known as the index). 
+
+7. Temporarily switch to a different commit
+   If you want to temporarily go back to it, fool around, then come back to where you are, all you have to do is check out the desired commit:
+
+# This will detach your HEAD, that is, leave you with no branch checked out:
+  git checkout 0d1d7fc32
+
+8. Or if you want to make commits while you're there, go ahead and make a new branch while you're at it:
+   git checkout -b old-state 0d1d7fc32
+
+9. Reverting Working Copy to Most Recent Commit
+    To revert to the previous commit, ignoring any changes:
+
+    git reset --hard HEAD
+>>>>>>> 081fb8e17ccd2620c382ef210fa3f8bc592bb929
